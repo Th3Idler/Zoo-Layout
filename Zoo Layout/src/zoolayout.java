@@ -35,7 +35,7 @@ public class zoolayout extends JFrame {
         createMenuBar();
 
 setTitle("Submenu");
-setSize(100, 250);
+setSize(250, 500);
 setLocationRelativeTo(null);
 setDefaultCloseOperation(EXIT_ON_CLOSE);
 JButton quitButton = new JButton("Quit");
@@ -84,32 +84,47 @@ pack();
         ImageIcon iconExit = new ImageIcon("exit.png");
 
        
-        JMenu fileMenu = new JMenu("Menu");
-
+       
+       JMenu fileMenu = new JMenu("Habitats");
         JMenu impMenu = new JMenu("Aquarium");
+        JMenu varMenu = new JMenu("Garden");
+        JMenu zarMenu = new JMenu("icecastle");
 
+       /* 
         JMenuItem aquariumMi = new JMenuItem("Aquarium");
         JMenuItem gardenMi = new JMenuItem("Garden");
         JMenuItem giftsMi = new JMenuItem("Gift shop");
         JMenuItem lunchMi = new JMenuItem("Lunch");
         JMenuItem icecastleMi = new JMenuItem("icecastle" );
+      
+        */
+      
+        //aquarium
+        JMenuItem squidMi = new JMenuItem("squid" );
+        JMenuItem dolfinMi = new JMenuItem("dolfin" );
         
-        JMenuItem newsfMi = new JMenuItem("Import newsfeed list...");
-        JMenuItem bookmMi = new JMenuItem("Import bookmarks...");
-        JMenuItem mailMi = new JMenuItem("Import mail...");
+        impMenu.add(squidMi);
+        impMenu.add(dolfinMi);
         
-        impMenu.add(gardenMi);
-        impMenu.add(giftsMi);
-        impMenu.add(lunchMi);
-       
+        //garden
+        JMenuItem bunnyMi = new JMenuItem("bunny");
+        
+        varMenu.add(bunnyMi);
+        
+        //ice castle
+        JMenuItem penguinMi = new JMenuItem("penguin");
+        
+        zarMenu.add(penguinMi);
+        
+        /*
         JMenuItem aquarium1Mi = new JMenuItem("Aquarium", iconNew);
         JMenuItem garden1Mi = new JMenuItem("Garden", iconOpen);
         JMenuItem gifts1Mi = new JMenuItem("Gift shop", iconSave);
         JMenuItem lunch1Mi = new JMenuItem("Lunch", iconSave);
         JMenuItem icecastle1Mi = new JMenuItem("icecastle", iconSave);
-
+         */
        
-        JMenuItem exitMi = new JMenuItem("Exit Submenu", iconExit);
+        JMenuItem exitMi = new JMenuItem("Exit habitat list", iconExit);
         exitMi.setToolTipText("Exit application");
 
         exitMi.addActionListener(new ActionListener() {
@@ -118,15 +133,21 @@ pack();
                 System.exit(0);
             }
         });
-
+        /*
         fileMenu.add(aquarium1Mi);
         fileMenu.add(garden1Mi);
         fileMenu.add(gifts1Mi);
         fileMenu.add(lunch1Mi);
         fileMenu.add(icecastle1Mi);
         fileMenu.addSeparator();
+        */
+        
+        //classifies sub menus
         fileMenu.add(impMenu);
         fileMenu.addSeparator();
+        fileMenu.add(varMenu);
+        fileMenu.addSeparator();
+        fileMenu.add(zarMenu);
         fileMenu.add(exitMi);
 
         menubar.add(fileMenu);
