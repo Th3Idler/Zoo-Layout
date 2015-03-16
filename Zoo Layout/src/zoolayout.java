@@ -110,6 +110,17 @@ pack();
         JMenuItem bunnyMi = new JMenuItem("bunny");
         
         varMenu.add(bunnyMi);
+        bunnyMi.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent event) {
+        		Bunbun bunbun = new Bunbun();
+        		bunbun.go();
+        		bunbun.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        	}
+        	
+        }
+        
+        		);
         
         //ice castle
         JMenuItem penguinMi = new JMenuItem("penguin");
