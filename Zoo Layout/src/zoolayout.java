@@ -26,12 +26,15 @@ public class zoolayout extends JFrame {
 
     private void initUI() {
     	
-        String lyrics =  "Drawing is Life";
+        String zoo =  "";
         
-        label = new JLabel(lyrics);
+        label = new JLabel(zoo);
+        /*
+        
         label.setFont(new Font("Serif", Font.PLAIN, 14));
         label.setForeground(new Color(250, 50, 25));
-
+       
+        */
         createMenuBar();
 
 setTitle("Submenu");
@@ -68,10 +71,11 @@ gl.setHorizontalGroup(gl.createSequentialGroup()
 
 gl.setVerticalGroup(gl.createParallelGroup()
         .addComponent(arg[0])
-);
+);}
 
-pack();
-} 
+
+
+
     
     private void createMenuBar() {
         
@@ -101,11 +105,31 @@ pack();
       
         //aquarium
         JMenuItem squidMi = new JMenuItem("squid" );
-        JMenuItem dolfinMi = new JMenuItem("dolfin" );
+        JMenuItem dolphinMi = new JMenuItem("dolphin" );
         
+        
+        impMenu.add(dolphinMi);
         impMenu.add(squidMi);
-        impMenu.add(dolfinMi);
+        squidMi.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent event) {
+        		Squid squid = new Squid();
+        		squid.go();
+        		squid.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        	}
+        }
+        );
         
+       // impMenu.add(DolphinMi);
+       /* DolphinMi.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent event) {
+        		Dolphin dolfin = new Dolphin();
+        		dolfin.go();
+        		dolfin.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        	}
+        });
+    		*/
         //garden
         JMenuItem bunnyMi = new JMenuItem("bunny");
         
@@ -119,13 +143,14 @@ pack();
         	}
         	
         }
-        
-        		);
+        );
         
         //ice castle
         JMenuItem penguinMi = new JMenuItem("penguin");
         
         zarMenu.add(penguinMi);
+       
+        
         
         /*
         JMenuItem aquarium1Mi = new JMenuItem("Aquarium", iconNew);
@@ -177,7 +202,7 @@ pack();
             }
         });
     }
-}
+{}}
 
             
             
