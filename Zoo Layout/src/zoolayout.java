@@ -109,6 +109,15 @@ gl.setVerticalGroup(gl.createParallelGroup()
         
         
         impMenu.add(dolphinMi);
+        dolphinMi.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent event) {
+        		Dolphin dolfin = new Dolphin();
+        		dolfin.go();
+        		dolfin.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        	}
+        });
+        
         impMenu.add(squidMi);
         squidMi.addActionListener(new ActionListener() {
         	@Override
@@ -117,8 +126,7 @@ gl.setVerticalGroup(gl.createParallelGroup()
         		squid.go();
         		squid.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         	}
-        }
-        );
+        });
         
        // impMenu.add(DolphinMi);
        /* DolphinMi.addActionListener(new ActionListener() {
@@ -141,15 +149,22 @@ gl.setVerticalGroup(gl.createParallelGroup()
         		bunbun.go();
         		bunbun.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         	}
-        	
-        }
-        );
+        	});
         
         //ice castle
         JMenuItem penguinMi = new JMenuItem("penguin");
         
         zarMenu.add(penguinMi);
-       
+        penguinMi.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent event) {
+        		Penguin penguin = new Penguin();
+        		penguin.go();
+        		penguin.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        		
+        	}
+        });
+        		
         
         
         /*
