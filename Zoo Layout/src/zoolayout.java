@@ -26,7 +26,8 @@ public class zoolayout extends JFrame {
 
     private void initUI() {
     	
-        String zoo =  "";
+    	//aparently makes this entire thing start
+        String zoo =  "welcome to the zoo";
         
         label = new JLabel(zoo);
         /*
@@ -37,8 +38,9 @@ public class zoolayout extends JFrame {
         */
         createMenuBar();
 
+        
 setTitle("Submenu");
-setSize(250, 500);
+setSize(300, 500);
 setLocationRelativeTo(null);
 setDefaultCloseOperation(EXIT_ON_CLOSE);
 JButton quitButton = new JButton("Quit");
@@ -50,6 +52,7 @@ quitButton.addActionListener(new ActionListener() {
     }
 });
 
+//creates quit button
 createLayout(quitButton);
 createLayout(label);
 
@@ -88,26 +91,17 @@ gl.setVerticalGroup(gl.createParallelGroup()
         ImageIcon iconExit = new ImageIcon("exit.png");
 
        
-       
+       //classifies the different sub-menus there will be
        JMenu fileMenu = new JMenu("Habitats");
         JMenu impMenu = new JMenu("Aquarium");
         JMenu varMenu = new JMenu("Garden");
         JMenu zarMenu = new JMenu("icecastle");
-
-       /* 
-        JMenuItem aquariumMi = new JMenuItem("Aquarium");
-        JMenuItem gardenMi = new JMenuItem("Garden");
-        JMenuItem giftsMi = new JMenuItem("Gift shop");
-        JMenuItem lunchMi = new JMenuItem("Lunch");
-        JMenuItem icecastleMi = new JMenuItem("icecastle" );
-      
-        */
       
         //aquarium
         JMenuItem squidMi = new JMenuItem("squid" );
         JMenuItem dolphinMi = new JMenuItem("dolphin" );
         
-        
+        //dolphin sub-menu and habitat launching
         impMenu.add(dolphinMi);
         dolphinMi.addActionListener(new ActionListener() {
         	@Override
@@ -118,6 +112,7 @@ gl.setVerticalGroup(gl.createParallelGroup()
         	}
         });
         
+        //squid sub-menu and habitat launching
         impMenu.add(squidMi);
         squidMi.addActionListener(new ActionListener() {
         	@Override
@@ -127,18 +122,10 @@ gl.setVerticalGroup(gl.createParallelGroup()
         		squid.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         	}
         });
-        
-       // impMenu.add(DolphinMi);
-       /* DolphinMi.addActionListener(new ActionListener() {
-        	@Override
-        	public void actionPerformed(ActionEvent event) {
-        		Dolphin dolfin = new Dolphin();
-        		dolfin.go();
-        		dolfin.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        	}
-        });
-    		*/
+       
         //garden
+        
+        //bunny sub-menu and habitat launching
         JMenuItem bunnyMi = new JMenuItem("bunny");
         
         varMenu.add(bunnyMi);
@@ -149,9 +136,11 @@ gl.setVerticalGroup(gl.createParallelGroup()
         		bunbun.go();
         		bunbun.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         	}
-        	});
+        });
         
         //ice castle
+        
+        //penguin sub-menu and habitat launching
         JMenuItem penguinMi = new JMenuItem("penguin");
         
         zarMenu.add(penguinMi);
@@ -164,17 +153,8 @@ gl.setVerticalGroup(gl.createParallelGroup()
         		
         	}
         });
-        		
-        
-        
-        /*
-        JMenuItem aquarium1Mi = new JMenuItem("Aquarium", iconNew);
-        JMenuItem garden1Mi = new JMenuItem("Garden", iconOpen);
-        JMenuItem gifts1Mi = new JMenuItem("Gift shop", iconSave);
-        JMenuItem lunch1Mi = new JMenuItem("Lunch", iconSave);
-        JMenuItem icecastle1Mi = new JMenuItem("icecastle", iconSave);
-         */
        
+        //code for exiting habitat list
         JMenuItem exitMi = new JMenuItem("Exit habitat list", iconExit);
         exitMi.setToolTipText("Exit application");
 
@@ -184,16 +164,8 @@ gl.setVerticalGroup(gl.createParallelGroup()
                 System.exit(0);
             }
         });
-        /*
-        fileMenu.add(aquarium1Mi);
-        fileMenu.add(garden1Mi);
-        fileMenu.add(gifts1Mi);
-        fileMenu.add(lunch1Mi);
-        fileMenu.add(icecastle1Mi);
-        fileMenu.addSeparator();
-        */
         
-        //classifies sub menus
+        //classifies sub-menus
         fileMenu.add(impMenu);
         fileMenu.addSeparator();
         fileMenu.add(varMenu);
@@ -206,6 +178,7 @@ gl.setVerticalGroup(gl.createParallelGroup()
         setJMenuBar(menubar);        
     }
     
+    //code for running actual program
     public static void main(String[] args) {
         
         EventQueue.invokeLater(new Runnable() {
@@ -214,10 +187,10 @@ gl.setVerticalGroup(gl.createParallelGroup()
                 
                 zoolayout ex = new zoolayout();
                 ex.setVisible(true);
-            }
-        });
     }
-{}}
+    });
+    }
+    {}}
 
             
             
