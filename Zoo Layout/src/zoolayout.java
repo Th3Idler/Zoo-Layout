@@ -96,6 +96,7 @@ gl.setVerticalGroup(gl.createParallelGroup()
         JMenu impMenu = new JMenu("Aquarium");
         JMenu varMenu = new JMenu("Garden");
         JMenu zarMenu = new JMenu("icecastle");
+        JMenu parMenu = new JMenu("plains");
       
         //aquarium
         JMenuItem squidMi = new JMenuItem("squid" );
@@ -138,6 +139,23 @@ gl.setVerticalGroup(gl.createParallelGroup()
         	}
         });
         
+        //plains
+        
+        //lion
+        JMenuItem LionMi = new JMenuItem("lion");
+        
+        varMenu.add(bunnyMi);
+        LionMi.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent event) {
+        		Lion lion = new Lion();
+        		lion.go();
+        		lion.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        		
+        	}
+        });
+        
+        
         //ice castle
         
         //penguin sub-menu and habitat launching
@@ -171,6 +189,10 @@ gl.setVerticalGroup(gl.createParallelGroup()
         fileMenu.add(varMenu);
         fileMenu.addSeparator();
         fileMenu.add(zarMenu);
+        fileMenu.addSeparator();
+        fileMenu.add(parMenu);
+        fileMenu.addSeparator();
+        fileMenu.addSeparator();
         fileMenu.add(exitMi);
 
         menubar.add(fileMenu);
