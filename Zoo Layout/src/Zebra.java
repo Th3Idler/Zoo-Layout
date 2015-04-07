@@ -3,7 +3,6 @@
 
 import java.awt.Color;
 import java.awt.GradientPaint;
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
@@ -12,59 +11,16 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
-
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
-
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
-
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
-
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
-
-import java.awt.GradientPaint;
-import java.awt.GradientPaint;
-
 
 public class Zebra extends JFrame {
 
-  class DrawZebraPanel extends JPanel {
+ public class DrawZebraPanel extends JPanel {
 	
 		int x = 440;
 		int y = 150;
 	   
 	
-		private void doDrawing(Graphics g) {
+		public void doDrawing(Graphics g) {
 	    	
 	    	
 	    	 Graphics2D g2d = (Graphics2D) g;

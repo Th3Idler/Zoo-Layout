@@ -33,7 +33,7 @@ import java.awt.Graphics2D;
 	        frame.setResizable(false);
 	        frame.setSize(900, 835);
 	        frame.setLocation(5, 5);
-	        //moveIt();
+	     //   moveIt();
 	    }
 
 	    class DrawPanel extends JPanel {
@@ -192,7 +192,7 @@ import java.awt.Graphics2D;
 	        }
 	    }
 	}
-/*
+/*	
 	    public void moveIt() {
 	        while(true){
 	            if(oneX >= 800){

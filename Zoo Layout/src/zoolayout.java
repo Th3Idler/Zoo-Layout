@@ -142,15 +142,15 @@ gl.setVerticalGroup(gl.createParallelGroup()
         //plains
         
         //lion
-        JMenuItem LionMi = new JMenuItem("lion");
+        JMenuItem ZebraMi = new JMenuItem("Zebra");
         
-        varMenu.add(bunnyMi);
-        LionMi.addActionListener(new ActionListener() {
+        varMenu.add(ZebraMi);
+        ZebraMi.addActionListener(new ActionListener() {
         	@Override
         	public void actionPerformed(ActionEvent event) {
-        		Lion lion = new Lion();
-        		lion.go();
-        		lion.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        		Zebra zebra = new Zebra();
+        		zebra.go();
+        		zebra.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         		
         	}
         });

@@ -12,7 +12,7 @@ import javax.swing.SwingUtilities;
 
 class DrawPanel extends JPanel {
 	 int x = 300;
-	 int y =	500;
+	 int y = 500;
 	 int a = 139 ;  int b = 69 ; int c = 19;
     private void doDrawing(Graphics g){ 
     Graphics2D g2 = (Graphics2D) g;
