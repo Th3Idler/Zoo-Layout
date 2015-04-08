@@ -101,6 +101,7 @@ gl.setVerticalGroup(gl.createParallelGroup()
         //aquarium
         JMenuItem squidMi = new JMenuItem("squid" );
         JMenuItem dolphinMi = new JMenuItem("dolphin" );
+        JMenuItem SharkMi = new JMenuItem("shark");
         
         //dolphin sub-menu and habitat launching
         impMenu.add(dolphinMi);
@@ -123,7 +124,17 @@ gl.setVerticalGroup(gl.createParallelGroup()
         		squid.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         	}
         });
-       
+        
+        //Shark
+        impMenu.add(SharkMi);
+        SharkMi.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent event) {
+        		Shark shark = new Shark();
+        		shark.go();
+        		shark.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        	}
+        });
         //garden
         
         //bunny sub-menu and habitat launching
@@ -138,24 +149,7 @@ gl.setVerticalGroup(gl.createParallelGroup()
         		bunbun.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         	}
         });
-        
-        //plains
-        
-        //lion
-        JMenuItem ZebraMi = new JMenuItem("Zebra");
-        
-        varMenu.add(ZebraMi);
-        ZebraMi.addActionListener(new ActionListener() {
-        	@Override
-        	public void actionPerformed(ActionEvent event) {
-        		Zebra zebra = new Zebra();
-        		zebra.go();
-        		zebra.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        		
-        	}
-        });
-        
-        
+       
         //ice castle
         
         //penguin sub-menu and habitat launching
@@ -168,6 +162,19 @@ gl.setVerticalGroup(gl.createParallelGroup()
         		Penguin penguin = new Penguin();
         		penguin.go();
         		penguin.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        		
+        	}
+        });
+        
+        JMenuItem SnowLeopardMi = new JMenuItem("Snow Leopard");
+        
+        zarMenu.add(SnowLeopardMi);
+        SnowLeopardMi.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent event) {
+        		SwingSnowLeopard SnowLeopard = new SwingSnowLeopard();
+        		SnowLeopard.go();
+        		SnowLeopard.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         		
         	}
         });

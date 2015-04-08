@@ -9,7 +9,7 @@ import java.applet.*;
 
 
 public class SwingSnowLeopard {
-	final public static class Tester {
+	
 
 		JFrame frame;
 
@@ -29,13 +29,14 @@ public class SwingSnowLeopard {
 
 		public static void main(String[] args) {
 
-		new Tester().go();
+		new SwingSnowLeopard().go();
 
 		}
 
-		private void go() {
+		public void go() 
+		{
 
-		frame = new JFrame("Test");
+		frame = new JFrame("Snow Leopard");
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -51,7 +52,7 @@ public class SwingSnowLeopard {
 
 		frame.setLocation(3, 4);
 
-		moveIt();
+		//moveIt();
 
 		}
 
@@ -297,4 +298,4 @@ public class SwingSnowLeopard {
 		}
 
 }
-}
+

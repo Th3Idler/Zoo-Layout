@@ -22,7 +22,7 @@ final public class Shark {
 		
 	}
 	
-	private void go() { 
+	public void go() { 
 		//creates jframe panel
 		frame = new JFrame("shARK");
 		
@@ -39,7 +39,7 @@ final public class Shark {
 		frame.setResizable(false);
 		frame.setSize(800, 800);
 		frame.setLocation(375, 55);
-		moveIt();
+		//moveIt();
 		
 		
 	}
