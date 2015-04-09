@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,6 +20,7 @@ import javax.swing.JMenuItem;
 public class zoolayout extends JFrame {
 
 	JLabel label;
+	Graphics g;
     public zoolayout() {
         
         initUI();
@@ -178,6 +180,25 @@ gl.setVerticalGroup(gl.createParallelGroup()
         		
         	}
         });
+        
+        //Plains
+        
+        //Zebra
+        JMenuItem ZebraMi = new JMenuItem("Zeeebra");
+        
+        parMenu.add(ZebraMi);
+        ZebraMi.addActionListener(new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent event) {
+        		Zebra zebra = new Zebra();
+        		zebra.setVisible(true);
+        		System.out.println("yo Zeebs");
+        		Zebra.DrawZebraPanel zpanel = zebra.new DrawZebraPanel();
+        		zpanel.paintComponent(g);
+       		
+        	}
+        });
+
        
         //code for exiting habitat list
         JMenuItem exitMi = new JMenuItem("Exit habitat list", iconExit);
